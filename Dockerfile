@@ -8,7 +8,8 @@ RUN apk add --update bash
 RUN apk add --update python py-pip \
   && pip install -U awscli
 
-# Install hugo
+# Install hugo.
+# Code taken from this project: https://github.com/jojomi/docker-hugo
 ENV HUGO_VERSION=0.16
 RUN apk add --update wget ca-certificates && \
   cd /tmp/ && \
