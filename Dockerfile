@@ -10,7 +10,7 @@ RUN apk add --update python py-pip \
 
 # Install hugo.
 # Code taken from this project: https://github.com/jojomi/docker-hugo
-ENV HUGO_VERSION=0.16
+ENV HUGO_VERSION=0.17
 RUN apk add --update wget ca-certificates && \
   cd /tmp/ && \
   wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-64bit.tgz && \
