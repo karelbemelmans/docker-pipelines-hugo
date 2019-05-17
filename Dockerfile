@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 MAINTAINER Karel Bemelmans <mail@karelbemelmans.com>
 
 # Install packages needed to build
@@ -6,11 +6,10 @@ RUN apk add --update --no-cache \
     bash \
     ca-certificates \
     curl \
-    python \
-    py-pip \
+    python3 \
     wget \
-  && pip install --upgrade pip \
-  && pip install -U awscli
+  && pip3 install --upgrade pip \
+  && pip3 install -U awscli
 
 # Install hugo.
 ARG HUGO_VERSION=0.25.1
